@@ -37,7 +37,6 @@ def register(dp, bot):
                 reply_markup=keyboard, format="markdown"
             )
 
-        # --- ПОДПИСКА ---
         if payload == "check_sub":
             if await is_user_subscribed(user_id):
                 await show(TEXT_WELCOME, main_menu_kb)
@@ -59,7 +58,6 @@ def register(dp, bot):
             )
             return
 
-        # --- РАЗДЕЛЫ ---
         if payload == "about":
             await show(TEXT_ABOUT, back_to_menu_kb)
 
@@ -86,6 +84,3 @@ def register(dp, bot):
 
         elif payload == "contacts":
             await show(TEXT_CONTACTS, back_to_menu_kb)
-
-        else:
-            print(f"UNHANDLED PAYLOAD: {payload}", flush=True)

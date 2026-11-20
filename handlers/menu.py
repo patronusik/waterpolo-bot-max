@@ -65,9 +65,6 @@ def register(dp, bot):
             await show(TEXT_ADDRESSES, back_to_menu_kb)
 
         elif payload == "paid_services":
-            import os
-    file_exists = os.path.exists("files/price.pdf")
-    print(f"PDF EXISTS: {file_exists}", flush=True)
             try:
                 await bot.send_file(
                     user_id=user_id,

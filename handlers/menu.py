@@ -65,7 +65,7 @@ def register(dp, bot):
             await show(TEXT_ADDRESSES, back_to_menu_kb)
 
         elif payload == "paid_services":
-            try:
+           try:
                 await bot.send_file(
                     user_id=user_id,
                     file_path="files/price.pdf",
@@ -73,9 +73,7 @@ def register(dp, bot):
                     text=TEXT_PAID_SERVICES,
                     reply_markup=back_to_menu_kb
                 )
-                print(f"SEND_FILE OK: user_id={user_id}", flush=True)
-            except Exception as e:
-                print(f"SEND_FILE FAILED: {e}", flush=True)
+            except Exception:
                 await show(TEXT_PAID_SERVICES, back_to_menu_kb)
 
         elif payload == "faq_menu":

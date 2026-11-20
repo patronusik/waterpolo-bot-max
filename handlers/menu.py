@@ -89,6 +89,3 @@ def register(dp, bot):
 
         else:
             print(f"UNHANDLED PAYLOAD: {payload}", flush=True)
-
-        else:
-            print(f"UNHANDLED PAYLOAD: {payload}", flush=True)

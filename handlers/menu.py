@@ -69,7 +69,7 @@ def register(dp, bot):
                 await bot.send_file(
                     user_id=user_id,
                     file_path="files/price.pdf",
-                    media_type="document",
+                    media_type="file",
                     text=TEXT_PAID_SERVICES,
                     reply_markup=back_to_menu_kb
                 )
